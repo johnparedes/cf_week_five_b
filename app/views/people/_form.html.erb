@@ -1,0 +1,33 @@
+<%= form_for @person do |f| %>
+  <p><div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div></p>
+  <p><div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div></p>
+  <p><div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div></p>
+  <%= f.fields_for :address do |cls_builder| %>
+    <p><div class="field">
+      <%= cls_builder.label :street_address %>
+      <%= cls_builder.text_field :street_address %>
+    </div></p>
+      <p><div class="field">
+      <%= cls_builder.label :city %>
+      <%= cls_builder.text_field :city %>
+    </div></p>
+      <p><div class="field">
+      <%= cls_builder.label :state %>
+      <%= cls_builder.text_field :state %>
+    </div></p>
+    <p><div class="field">
+      <%= cls_builder.label :zip %>
+      <%= cls_builder.text_field :zip %>
+    </div></p>
+  <% end %>
+  <%=f.submit %>
+<% end %>

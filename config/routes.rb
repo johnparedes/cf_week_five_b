@@ -1,11 +1,13 @@
 CfWeekFiveB::Application.routes.draw do
-  get "people/index"
-  get "people/show"
-  get "people/new"
-  get "people/edit"
-  get "people/create"
-  get "people/update"
-  get "people/delete"
+  #get "people/index"
+  #get "people/show"
+  #get "people/new"
+  #get "people/edit"
+  #get "people/create"
+  #get "people/update"
+  #get "people/delete"
+  resources :people
+  root "people#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -46,7 +48,7 @@ CfWeekFiveB::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

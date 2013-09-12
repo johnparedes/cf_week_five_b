@@ -1,2 +1,18 @@
-<h1>People#show</h1>
-<p>Find me in app/views/people/show.html.erb</p>
+<h1><%= @person.first_name.to_s + " " + @person.last_name.to_s %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @person.first_name.to_s + " " + @person.last_name.to_s %></td>
+        <td><%= @person.phone %></td>
+      </tr>
+  </tbody>
+</table>
+<p><%= link_to "Edit", edit_person_path %></p>
+<p><%= link_to "Create Person", new_person_path %></p>
+<p><%= link_to "Home", root_path %></p>
