@@ -4,12 +4,14 @@
     <tr>
       <th>Name</th>
       <th>Phone</th>
+      <th>Address</th>
     </tr>
   </thead>
   <tbody>
       <tr>
         <td><%= @person.first_name.to_s + " " + @person.last_name.to_s %></td>
         <td><%= @person.phone %></td>
+        <td><%= @person.address.street_address if @person.address.present? %></td>
       </tr>
   </tbody>
 </table>

@@ -19,7 +19,6 @@ before_action :find_person, only: %w(edit update show)
 
   def create
     @person = Person.new person_params
-    @person.build_address
     if @person.save
       flash[:notice] = "Person successfully added."
       redirect_to root_url
